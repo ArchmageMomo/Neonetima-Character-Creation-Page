@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+@import url('https://fonts.googleapis.com/css?family=Acme');
+
+body {
+    background-color: lightblue;
+}
+
+.blocks{
+	width: 75%;
+	height: auto;
+	
+	border-style: ridge;
+	border-width: 5px;
+	border-color: lightgrey;
+	border-radius: 15px;
+	
+	padding: 2%;
+	
+	background-color: rgba(50,50,50,0.4);
+	position: relative;
+	top: 5%;
+	left: 7%;
+	right: 13%;
+	
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 25px;
+}
+
+.formulars{
+	border: none;
+	
+	width: 100%;
+	height: auto;
+	
+	left: -2%;
+	right: 2%;
+	
+	font-family: 'Acme', sans-serif;
+
+}
+
+
+.inputs{
+	font-size: 25px;
+	font-family: 'Acme', sans-serif;
+}
+
+.navber{
+	position: fixed;
+	width: 3%;
+	height:3%;
+}
+
+.headerpic{
+	height: 2%;
+	width: auto;
+}
+
+#forward{
+	opacity: 0.4;
+}
+
+#backward{
+	opacity: 0.4;
+}
+
+.commitbar-pos{
+	position: fixed;
+	left: 86%;
+	top: 33%;
+	
+	padding: 1%;
+}
+
+.commitbar-active{
+	border-style: ridge;
+	border-width: 5px;
+	border-color: lightgrey;
+	border-bottom-right-radius: 15px;
+	border-top-right-radius: 15px;
+	
+	background-color: rgba(50,50,50,0.4);
+}
+
+.tabin{
+	margin-left: 25px;
+}

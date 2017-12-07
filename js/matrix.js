@@ -12,16 +12,6 @@ function initialize(n){
 		
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	if(n==0){
 		document.getElementById('embedding').innerHTML=n0;
 		atm=0;
@@ -29,19 +19,8 @@ function initialize(n){
 		document.getElementById('embedding').innerHTML=eval("n" + n + ";");
 		checkChecked(0);
 	}else if(n==lastpage){
-		
+		//TODO
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	if(n>0){
 		a = document.getElementsByName('topic');
@@ -52,9 +31,20 @@ function initialize(n){
 		}
 	}
 	
-	if(atm==max && n!=0){
+	if(n>max){
 		max++;
 		atm=max;
+	}
+	
+	if(atm==0){
+		document.getElementById('forward').style.opacity=0.4;
+	}else{
+		document.getElementById('forward').style.opacity=1;
+	}
+	if(max==atm){
+		document.getElementById('backward').style.opacity=0.4;
+	}else{
+		document.getElementById('backward').style.opacity=1;
 	}
 }
 

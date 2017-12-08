@@ -1,13 +1,5 @@
 var fullseed='X';
-var lastpage=10;
-
-function findlastpage(){
-	n=0;
-	for(i=0; eval("n"+i);i++){
-		n++;
-	}
-	lastpage=n;
-}
+var lastpage=3;
 
 function giveMeTop(){
 	$("html, body").animate({ scrollTop: 0 }, "slow");
@@ -26,7 +18,7 @@ function writeseed(pos){
 	a = document.getElementsByName('topic');
 	for(i=0;i<a.length;i++){
 		if(a[i].checked){
-			fullseed=fullseed.replaceAt(pos,a[i].value)
+			fullseed=fullseed.replaceAt(pos,a[i].value.substring(a[i].value.length-1,a[i].value.length))
 		}
 	}
 

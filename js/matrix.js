@@ -16,8 +16,20 @@ function initialize(n){
 	if(n==0){
 		document.getElementById('embedding').innerHTML=n0;
 		atm=0;
-	}else if(n>0 && n<lastpage){
-		document.getElementById('embedding').innerHTML=buildform(n);
+		}else if(n>0 && n<lastpage){
+			a = document.getElementsByName('topic');
+		val="";
+		for(i=0;i<a.length;i++){
+			if(a[i].checked){
+				val=a[i].value.substring(0, a[i].value.length - 1);
+			}
+		}
+		
+		if(val>=0 && val<10){
+			document.getElementById('embedding').innerHTML=buildform(n);
+		}else{
+			document.getElementById('embedding').innerHTML=buildsubform(val);
+		}
 		checkChecked(0);
 	}else if(n==lastpage){
 		//TODO
@@ -53,36 +65,33 @@ function call(n){
 	if(n==0){
 		if(0!=atm){
 			atm--;
-			initialize(atm);
+			try{
+				initialize(atm);
+			}catch (err){
+				atm--
+				initialize(atm);
+			}
 		}
 	}else if (n==1){
 		if(max!=atm){
 			atm++;
-			initialize(atm);
+			try{
+				initialize(atm);
+			}catch (err){
+				atm++;
+				initialize(atm);
+			}
 		}
 	}
 }
 
 function callspecial(){
 	
-	a = document.getElementsByName('topic');
-	val="";
-	for(i=0;i<a.length;i++){
-		if(a[i].checked){
-			val=a[i].value;
-		}
-	}
-	
-	if(val>=0 && val<10){
-		writeseed(seedindex);
-		if(atm==max){
-			initialize(max+1);
-		}else{
-			initialize(atm+1);
-		}
+	writeseed(seedindex);
+	if(atm==max){
+		initialize(max+1);
 	}else{
-		document.getElementById('embedding').innerHTML=buildsubform(val);
-		checkChecked(0);
+		initialize(atm+1);
 	}
 }
 

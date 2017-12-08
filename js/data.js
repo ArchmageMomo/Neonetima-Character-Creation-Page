@@ -7,7 +7,7 @@ Do you already have a character-seed? Put it here: \
 
 var n1="Superhuman;Human;Lifebound;Werecreature;Spirit;Demon;Angel";
 var d1="temp;temp;temp;temp;temp;temp;temp";
-var c1="Superhuman;0;Lifebound;Werecreature;Spirit;Demon;Angel";
+var c1="Superhuman0;1;Lifebound2;Werecreature3;Spirit4;Demon5;Angel6";
 
 var Superhuman="Orc;Elb;Half-Orc;Half-Elb;Dwarf;Alien;Aetherian;Celestial";
 var Superhumand="Orc;Elb;Half-Orc;Half-Elb;Dwarf;Alien;Aetherian;Celestial";
@@ -34,4 +34,4 @@ var Angeld="Seraphim;Ascended;Guardian;Half-Angel;Nephilim";
 var Angelc="0;1;2;3;4;5;6;7";
 
 
-n2=""
+var n3="";

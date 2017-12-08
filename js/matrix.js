@@ -1,4 +1,5 @@
 function initialize(n){
+	seedindex=n-1;
 	if(n>0 && n < lastpage){
 		document.getElementById('commitbar').innerHTML=commitbtn;
 		document.getElementById('commitbar').setAttribute('class','commitbar-pos commitbar-active')
@@ -16,10 +17,15 @@ function initialize(n){
 		document.getElementById('embedding').innerHTML=n0;
 		atm=0;
 	}else if(n>0 && n<lastpage){
-		document.getElementById('embedding').innerHTML=eval("n" + n + ";");
+		document.getElementById('embedding').innerHTML=buildform(n);
 		checkChecked(0);
 	}else if(n==lastpage){
 		//TODO
+	}
+	
+	if(n>max){
+		max++;
+		atm=max;
 	}
 	
 	if(n>0){
@@ -29,11 +35,6 @@ function initialize(n){
 				a[i].checked=true;
 			}
 		}
-	}
-	
-	if(n>max){
-		max++;
-		atm=max;
 	}
 	
 	if(atm==0){
@@ -63,38 +64,62 @@ function call(n){
 }
 
 function callspecial(){
-	writeseed(atm-1);
-	if(atm==max){
-		initialize(max+1);
+	
+	a = document.getElementsByName('topic');
+	val="";
+	for(i=0;i<a.length;i++){
+		if(a[i].checked){
+			val=a[i].value;
+		}
+	}
+	
+	if(val>=0 && val<10){
+		writeseed(seedindex);
+		if(atm==max){
+			initialize(max+1);
+		}else{
+			initialize(atm+1);
+		}
 	}else{
-		initialize(atm);
+		document.getElementById('embedding').innerHTML=buildsubform(val);
+		checkChecked(0);
 	}
 }
 
 
 var max=0;
 var atm=0;
+var seedindex=0;
 
 var commitbtn= "<button id='commit' class='inputs'>Next</button>"
 
 
+function buildform(n){
+	eval("formar=n"+n+".split(';');");
+	eval("formdes=d"+n+".split(';');");
+	eval("formcount=c"+n+".split(';');");
+	output="";
+	
+	for(i=0;i<formar.length;i++){
+		output+= "<input type='radio' name='topic' value=\""+formcount[i]+"\" onclick='checkChecked(1)'> <span class='boldify'>"+formar[i]+"</span><br><div class='tabin'>"+formdes[i]+"</div>";
+		if(i+1!=formar.length){
+			output+="<br><br>";
+		}
+	}
+	return output;
+}
 
-
-
-
-
-
-
-
-
-var n0="<button class='btn inputs' onclick=\"initialize(1)\">Start the character creation</button>\
-<br><br>\
-Do you already have a character-seed? Put it here: \
-<input id='seedinput' class='inputs' placeholder='XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' type='text' onkeydown = \"if (event.keyCode == 13) seedIn( document.getElementById('seedinput').value)\"></input>\
-<button onclick=\"seedIn(document.getElementById('seedinput').value)\" class='btn inputs'>Process</button>";
-
-var n1= "<input type='radio' name='topic' value='1' onclick='checkChecked(1)'> <span class='boldify'>Human</span><br><div class='tabin'>Just a puny human. Nothing special about you. Or is it?</div><br><br>\
-<input type='radio' name='topic' value='2' onclick='checkChecked(1)'> <span class='boldify'>Fairy</div><div class='tabin'>Born in the woods. You naturaly look harmless, but don't forget there's magic in your blood.</div><br><br>\
-<input type='radio' name='topic' value='3' onclick='checkChecked(1)'> <span class='boldify'>Demon</span><br><div class='tabin'>Is there anything to say about this?</div><br><br>";
-
-var n2= "TODO"
+function buildsubform(n){
+	eval("formar="+n+".split(';');");
+	eval("formdes="+n+"d.split(';');");
+	eval("formcount="+n+"c.split(';');");
+	output="";
+	
+	for(i=0;i<formar.length;i++){
+		output+= "<input type='radio' name='topic' value=\""+formcount[i]+"\" onclick='checkChecked(1)'> <span class='boldify'>"+formar[i]+"</span><br><div class='tabin'>"+formdes[i]+"</div>";
+		if(i+1!=formar.length){
+			output+="<br><br>";
+		}
+	}
+	return output;
+}

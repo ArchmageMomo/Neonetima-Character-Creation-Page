@@ -1,5 +1,13 @@
 var fullseed='X';
-var lastpage=3;
+var lastpage=10;
+
+function findlastpage(){
+	n=0;
+	for(i=0; eval("n"+i);i++){
+		n++;
+	}
+	lastpage=n;
+}
 
 function giveMeTop(){
 	$("html, body").animate({ scrollTop: 0 }, "slow");
@@ -35,3 +43,5 @@ function checkChecked(n){
 		document.getElementById('commit').disabled=false;
 	}
 }
+
+

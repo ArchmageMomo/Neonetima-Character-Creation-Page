@@ -87,7 +87,7 @@ function call(i){
 
 function navopac(){
 	
-	if( index>=max ){
+	if( index>=max || talevalue==true){
 		document.getElementById('forward').style.opacity=0.4;
 		document.getElementById('forward').onclick="";
 	}else{
@@ -101,7 +101,7 @@ function navopac(){
 		document.getElementById('backward').style.opacity=1;
 		document.getElementById('backward').onclick=function(){initialize(index-1)};
 	}
-	
+	talevalue=false;
 }
 
 function seedOut(){
@@ -194,43 +194,40 @@ function seedOut(){
 					}
 					
 				}else if(i==5){
-					temp=outbody[4][seed.charAt(i-1)]+";";
-					for(n=0;n<outbody[4][seed.charAt(i)].length;n++){
-						temp+=outbody[4][seed.charAt(i)][n];
-						if(n+1!=outbody[4][seed.charAt(i)].length){
-							temp+=";";
-						}
-					}
-					
-					temp=temp.replace(/,/gi,";");
-					temp=temp.split(";");
-					
-					temp2=outbody[4][seed.charAt(i)][seed.charAt(i+1)];
-					
-					temp2=temp2.replace(/,/gi,";");
-					temp2=temp2.split(";");
-					
-					temp = temp.filter(item => !temp2.includes(item)).filter(item => !know.split(", ").includes(item));
-					
-					temp=temp.unique();
-					
-					i++;
-					
+					firstelement=0;
+					temp=outbody[3][seed.charAt(i)].split(";");
 					for(n=0; n< temp.length;n++){
-						if(temp[0]!=""){
-							if(n==0){
+						if(temp[n]!=""){
+							if(firstelement==0){
 								know2+=temp[n];
+								firstelement=1;
 							}else{
-								know2+=", "+ temp[n];
+								know2+=", "+temp[n];
 							}
 						}
 					}
+				}else if(i==6){
+					for(n=0;n<outbody[4][seed.charAt(i-1)].length;n++){
+						temp=outbody[4][seed.charAt(i-1)][n].split(";");
+						
+						for(j=0;j< temp.length;j++){
+							if(temp[j]!=""){
+								if(firstelement==0){
+									know2+=temp[j];
+									firstelement=1;
+								}else{
+									know2+=", "+temp[j];
+								}
+							}
+						}
+					}
+					know2 = know2.split(", ").filter(item => !know.split(", ").includes(item)).filter(item => !outbody[4][seed.charAt(i-1)][seed.charAt(i)].split(";").includes(item));
 					
 				}
 			}
 			
 			know=know.split(", ").concat(standard.split(";")).unique().sort();
-			know2=know2.split(", ").sort();
+			know2=know2.sort();
 			
 			knowout1="<table>";
 			

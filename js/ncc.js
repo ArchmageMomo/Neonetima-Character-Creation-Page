@@ -70,3 +70,16 @@ function randomize(){
 	seed=ret;
 	initialize(seed.length)
 }
+
+function aTrueMage(){
+	document.getElementById('descHead').innerHTML = "Oh, you found it! Didn't expect that~~~<br><br>You probably want some kind of reward for finding this, don't you? But first of all, please promise me to never tell anyone about this. You can tell them that you found something, but please never tell them what you found where. Good? Good. <br><br><button class='btn' style='position:center' onclick='aTale()'>I promise not to tell anyone.</button>";
+}
+function aTale(){
+	document.getElementById('descHead').innerHTML = taleon;
+	document.getElementById('embedding').innerHTML = "";
+	document.getElementById('commitbar').innerHTML="";
+	document.getElementById('commitbar').setAttribute('class','commitbar-pos')
+	index+=1;
+	talevalue=true;
+	navopac();
+}

@@ -128,7 +128,7 @@ a.headerpic:active{
 	transition: all 1s ease-in-out;
 	
 	border: none;
-	background-image: url("../img/portal.JPG");
+	background-image: url("../img/portal.jpg");
 	box-shadow: 1px 1px 1px #777;
 }
 

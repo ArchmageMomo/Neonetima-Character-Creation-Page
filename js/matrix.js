@@ -249,25 +249,34 @@ function seedOut(){
 			
 			for(i=0;i<know2.length;i++){
 				if(i%3==0){
-					knowout2+="<tr><td>"+know2[i]+"</td>";
+					if(know2[i]!=="undefined"&&typeof know2[i]!=="undefined"){
+						knowout2+="<tr><td>"+know2[i]+"</td>";
+					}
 				}else if(i%3==1){
-					knowout2+="<td>"+know2[i]+"</td>";
+					if(know2[i]!=="undefined"&&typeof know2[i]!=="undefined"){
+						knowout2+="<td>"+know2[i]+"</td>";
+					}
 				}else{
-					knowout2+="<td>"+know2[i]+"</td></tr>";
+					if(know2[i]!=="undefined"&&typeof know2[i]!=="undefined"){
+						knowout2+="<td>"+know2[i]+"</td></tr>";
+					}
 				}
 			}
 			knowout2+="</table>"
-			
-			outb+=knowout1+"<br><br>";
-			outb+=outb2+knowout2;
-			
-			document.getElementById('descHead').innerHTML = outh;
-			document.getElementById('embedding').innerHTML = outb;
-			
-			document.getElementById('copy').addEventListener("click", function trigger() {
-				copy();
-			});
+		}else{
+			knowout2="";
 		}
+		
+		outb+=knowout1+"<br><br>";
+		outb+=outb2+knowout2;
+		
+		document.getElementById('descHead').innerHTML = outh;
+		document.getElementById('embedding').innerHTML = outb;
+		
+		document.getElementById('copy').addEventListener("click", function trigger() {
+			copy();
+		});
+		
 	}
 };
 

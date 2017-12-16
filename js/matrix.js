@@ -226,7 +226,7 @@ function seedOut(){
 				}
 			}
 			
-			know=know.split(", ").concat(standard.split(";")).unique().sort();
+			know=know.split(", ").unique().sort();
 			know2=know2.sort();
 			
 			knowout1="<table>";
@@ -263,6 +263,21 @@ function seedOut(){
 		}else{
 			knowout2="";
 		}
+		
+		knowout2+="<br><br><br>All characters can use:<br><br><table>";
+		know=standard.split(";");
+		
+		for(i=0;i<know.length;i++){
+			if(i%3==0){
+				knowout2+="<tr><td>"+know[i]+"</td>";
+			}else if(i%3==1){
+				knowout2+="<td>"+know[i]+"</td>";
+			}else{
+				knowout2+="<td>"+know[i]+"</td></tr>";
+			}
+		}
+		
+		knowout2+="</table>";
 		
 		outb+=knowout1+"<br><br>";
 		outb+=outb2+knowout2;

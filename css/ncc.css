@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
 @import url('https://fonts.googleapis.com/css?family=Acme');
 
 body {
@@ -16,7 +16,7 @@ body {
 	
 	padding: 2%;
 	
-	background-color: rgba(50,50,50,0.4);
+	background-color: rgba(50,50,50,0.3);
 	position: relative;
 	top: 5%;
 	left: 7%;
@@ -134,7 +134,7 @@ a.headerpic:active{
 
 .description-box{
 	
-	font-family: 'Shadows Into Light', cursive;
+	font-family: 'Indie Flower', cursive;
 	
 }
 

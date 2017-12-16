@@ -221,10 +221,28 @@ function seedOut(){
 							}
 						}
 					}
-					know2 = know2.split(", ").filter(item => !know.split(", ").includes(item)).filter(item => !outbody[4][seed.charAt(i-1)][seed.charAt(i)].split(";").includes(item));
+					know2 = know2.split(", ").filter(item => !know.split(", ").includes(item)).filter(item => !outbody[4][seed.charAt(i-1)][seed.charAt(i)].split(";").includes(item)).unique();
 					
 				}
 			}
+			
+			if(n5[parseInt(seed.charAt(5))+1][0]=="Adventurer"){
+				temp=outbody[4][seed.charAt(5)][seed.charAt(6)].split(";");
+				know2=temp[0];
+				for(j=1;j< temp.length;j++){
+					if(temp[j]!=""){
+						if(firstelement==0){
+							know2+=temp[j];
+							firstelement=1;
+						}else{
+							know2+=", "+temp[j];
+						}
+					}
+				}
+				
+				know2 = know2.split(", ").unique();
+			}
+			
 			
 			know=know.split(", ").unique().sort();
 			know2=know2.sort();
@@ -265,7 +283,7 @@ function seedOut(){
 		}
 		
 		knowout2+="<br><br><br>All characters can use:<br><br><table>";
-		know=standard.split(";");
+		know=standard.split(";").sort().unique();
 		
 		for(i=0;i<know.length;i++){
 			if(i%3==0){

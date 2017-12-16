@@ -125,7 +125,7 @@ var desint="<span title='You won't be able to learn the mods of this specificati
 
 var n6 = [
 		[desint,
-			["Bloodmagic","",0],
+			["Blood Mage","",0],
 			["Astrology","",1],
 			["Alchemist","",2],
 			["Dystopist","",3],
@@ -156,7 +156,7 @@ var n6 = [
 			["Adventurer","",0]]
 		];
 
-var standard="TEMP;TEMP2";
+var standard="The Betweenlands;Advanced Inventory;Akashic Tome;Animania;Battle Towers;Infernal Mobs;Auto Sapling;Back Tools;Baubles;Better Storage;Better with Mods;Better FPS;Biomes O' Plenty;Bloodmoon;AppleCore;AppleSkin;AutoRegLib;BdLib;Bookshelf;Brandon's Core;Cannibalism;Chameleon; Chicken Chunks;CodeChicken Core;CodeChicken Lib;Coffee Spawner;CoFH Core;Compat Layer;ConnectedTexturesMod;Corail Tombstone;CoralReef;CoroUtil;Cosmetic Armor;CraftStudio API;Creeper Nuggets;CustomMobSpawner;CXLibrary;Cyclic;Cyclops Core;D3Core;Deadly Monsters;Enchantment Descriptions;EnderCore;Enhanced Visuals;Eternal Winter;Extra Utils;Fanny Pack;Fast Leaf Decay;ForgeEndertech;Guide-API;Hardcore Darkness;Hardcore Wither;iChunUtil;Interaction Wheel;Inventory Tweaks;Iron Apples;IvToolkit;JourneyMap;JEI (And all dependet mods);Kore Sample L;Level Up!;LibVulpes;LLibrary;Lumberjack;Mantle;MCMultiPart;Minecraft Comes Alive;Mo' Creatures;ModUtilsLib;Morpheus;MusicCraft;NotEnoughIDs;OMLib;OpenModularPassiveDefense;Natura;Quark;RadixCore;ReAuth;Recurrent Complex;Rockhounding Mod: Core;Rockhounding Mod: Surface;Roguelike Dungeons;ShadowMC;Grimoire of Gaia;Backpacks;Silent Lib;NoMoreRecipeConflict;TamModized;The Spice of Life;ThutCore;UniDict;ValkyrieLib;WAILA (And all dependent mods);WanionLib;ZeroCore;Zombie Awareness;Ancient Trees L";
 		
 var outbody=[
 				[
@@ -182,7 +182,7 @@ var outbody=[
 						"God-Weapons",
 					],
 					[
-						"Evilcraft",
+						"EvilCraft",
 						"Druidry",
 						"",
 						"Botania",
@@ -199,28 +199,28 @@ var outbody=[
 						"Astral Sorcery;Tails",
 						"Tails",
 						"Tails",
-						"Bloodmagic",
+						"Blood Magic",
 						"Signposts"
 					],
 					[
-						"Evilcraft;Tails",
+						"EvilCraft;Tails",
 						"Angel of Vengance;Tails",
-						"Bloodmagic",
+						"Blood Magic",
 						"God-Weapons"
 					],
 					[
 						"Angel of Vengance;Tails",
-						"Evilcraft;Tails",
+						"EvilCraft;Tails",
 						"Reliquary",
 						"God-Weapons"
 					]
 				],
 				[
 					"Mystical Agriculture",
-					"Ashenweed",
+					"Ashenwheat",
 					"Advanced Rocketry",
 					"Dr. Squids Gunmod",
-					"Advanced Swords",
+					"Advanced Combat",
 					"Bonfires"
 				],
 				[
@@ -232,14 +232,14 @@ var outbody=[
 				],
 				[
 					[
-						"Bloodmagic;Blood Arsenal;Animus",
+						"Blood Magic;Blood Arsenal;Animus",
 						"Astral Sorcery;Basic Elements",
-						"Project E;Refined Storage;Refined Exchange;Runes of Wizzardry;Classic Rune pack",
-						"Abyssalcraft;Evilcraft",
-						"Draconic Evolution;TODO",
+						"Project E;Refined Storage;Refined Exchange;Runes of Wizzardry (and Classic Dusts Pack)",
+						"AbyssalCraft;EvilCraft",
+						"Draconic Evolution;Embers",
 						"Reliquary",
 						"Druidry;Roots;Botania",
-						"Lordcraft;Blocklings"
+						"Lord Craft;Blocklings"
 					],
 					[
 						"Advanced Swords;Just Jetpacks",
@@ -248,25 +248,25 @@ var outbody=[
 					],
 					[
 						"Advanced Rocketry",
-						"Crossroads;Psi;Particleman",
+						"Crossroads MC;Psi;Particle Man",
 						"Immersive Engineering;Thermal Expansions;Thermal Foundation;Simply Jetpacks;Redstone Arsenal",
-						"IC2;Minefactory Reloaded;Aplied Energistics 2;AE2 Stuff;Extreme Reactors",
+						"Industrial Craft;Minefactory Reloaded;Applied Energistics 2;AE2 Stuff;Extreme Reactors",
 						"Cyberware;Modular Powersuit",
 						"Genetics Reborn;Forestry",
 						"Railcraft;Environmental Tech;Just Jetpacks",
 						"Chemistry"
 					],
 					[
-						"Advanced Chimnys;Chisel;Secret Rooms;Storage Drawers;Bibliocraft;Architecturecraft;Fast Ladders;Thuts Elevators;Chisel and Bits;Drawers and Bits",
+						"Advanced Chimneys;Chisel;SecretRoomsMod;Storage Drawers;BiblioCraft;ArchitectureCraft;FastLadder;Thuts Elevators;Chisel and Bits;Drawers and Bits; Extra Bit Manipulation;Immersive Craft",
 						"Enchanting +;Enchantchanger",
-						"Floricraft;Mystical Agriculture;Plants;Forestry;Endercrop;Ashenweed;Dynamic Trees;Pams Hatvestcraft",
+						"Floricraft;Mystical Agriculture (and MFR Compatibility);Plants;Forestry;Ender Crop;Ashenwheat;Dynamic Trees;Pam's HarvestCraft",
 						"Tinker's Construct;PlusTIC",
 						"Ice and Fire;Dragon Realm"
 					],
 					[
-						"Ropebridges;Natures Compass;Hearthstones;Advanced Hookshots;Antique Atlas;Labyrinth"
+						"Ropebridges;Nature's Compass;Hearthstone Mod;Advanced Hook Launchers;Antique Atlas;Daedalus' Labyrinth"
 					]
 				]
 			];
 			
-var taleon="First of all, let me introduce myself again.<br> My name is Momo.<br> Archmage Momo. <br>I guess that explains why this was hidden in the 'mages' category of the character creation.<br><br>I'll tell you about the origins of Neonetima.<br> A long time ago I started writing stories. It was a great time, as people cared to pretend the stories were at least half-decent. I always wanted to write about some MMORPG and, you guessed it, I did. This MMORPG was called <a href='https://archmagestories.tumblr.com/post/158148616870/die-reisen-trilogie-neonetima'>Neonetima</a> and was the first story I almost scraped because of creativity issues.<br>I hesitated in releasing Neonetima, it wasn't as good as I wanted it to be. But I fell in love with the Universe. After half a year of not working with Neonetima, I felt guilty. I guess that guilt is why I ended up rewriting Neonetima and making it even worse than it already was. I released it as a part two of the \"Reisen Trilogie\", whitch translates into \"travel trilogy\". People seemed to like it, but that made me feel even more guilty. I ended up shunning Neonetima, didn't want to remember the slightest bit of it.<br>But I failed in forgetting it, so I returned to its very foundation, the rules of Neonetima, the core idea. I recreated it from there on.<br>So, why is this modpack called Neonetima? I felt like it.<br>Truth be told, it was a bad idea. Minecraft can't deliver what Neonetima is all about. Hell, even the words I write can't even describe the wonders of this Universe.<br><br>That was the story I had to tell. I am sorry for not being able to deliver the wonders Neonetima is made out of. Maybe someday these wonders will be reality.<br><br>Thanks.<br><span title='Neot'>Momo</span>"
+var taleon="First of all, let me introduce myself again.<br> My name is Momo.<br> Archmage Momo. <br>I guess that explains why this was hidden in the 'mages' category of the character creation.<br><br>I'll tell you about the origins of Neonetima.<br> A long time ago I started writing stories. It was a great time, as people cared to pretend the stories were at least half-decent. I always wanted to write about some MMORPG and, you guessed it, I did. This MMORPG was called <a href='https://archmagestories.tumblr.com/post/158148616870/die-reisen-trilogie-neonetima'>Neonetima</a> and was the first story I almost scraped because of creativity issues.<br>I hesitated in releasing Neonetima, it wasn't as good as I wanted it to be. But I fell in love with the Universe. After half a year of not working with Neonetima, I felt guilty. I guess that guilt is why I ended up rewriting Neonetima and making it even worse than it already was. I released it as a part two of the \"Reisen Trilogie\", whitch translates into \"travel trilogy\". People seemed to like it, but that made me feel even more guilty. I ended up shunning Neonetima, didn't want to remember the slightest bit of it.<br>But I failed in forgetting it, so I returned to its very foundation, the rules of Neonetima, the core idea. I recreated it from there on.<br>So, why is this modpack called Neonetima? I felt like it.<br>Truth be told, it was a bad idea. Minecraft can't deliver what Neonetima is all about. Hell, even the words I write can't even describe the wonders of this Universe.<br><br>That was the story I had to tell. I am sorry for not being able to deliver the wonders Neonetima is made of. Maybe someday these wonders will be reality.<br><br>Thanks.<br><span title='Neot'>Momo</span>"

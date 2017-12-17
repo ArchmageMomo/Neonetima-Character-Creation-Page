@@ -1,13 +1,14 @@
 function initialize(pos){
 	
 	index=pos;
-	
+	//Setting the maximum of the navbar
 	if(index>max){
 		max=index;
 	}
 	
+	//check which page to inject
 	if(pos==-1){
-		
+		//landingpage
 		document.getElementById("descHead").innerHTML=ni[0];
 		document.getElementById("embedding").innerHTML=ni[1];
 		
@@ -15,6 +16,7 @@ function initialize(pos){
 		document.getElementById('commitbar').setAttribute('class','commitbar-pos')
 		
 	}else if(pos>=0 && pos != seed.length){
+		//the form pages
 		
 		document.getElementById('commitbar').innerHTML=commitbtn;
 		document.getElementById('commitbar').setAttribute('class','commitbar-pos commitbar-active')
@@ -23,10 +25,15 @@ function initialize(pos){
 			call(2);
 		});
 		
-		if(seed.charAt(index=="X")){
-			checkChecked(0)
+		//enabling/disabling forward button
+		if(seed.charAt(index)=="X"){
+			checkChecked(0);
+		}else{
+			checkChecked(1);
 		}
 		
+		
+		//writing the form-page
 		try{
 			unwrap(eval("n"+pos));
 		}catch(err){
@@ -35,7 +42,7 @@ function initialize(pos){
 		}
 		
 	}else if(pos==seed.length){
-		
+		//output page
 		document.getElementById('commitbar').innerHTML="";
 		document.getElementById('commitbar').setAttribute('class','commitbar-pos')
 		
@@ -43,11 +50,12 @@ function initialize(pos){
 		
 	}
 	
+	//changing opacity of navbar
 	navopac();
 	
 }
 
-
+//injecting formulars; 
 function unwrap(str){
 	try{
 		if(isString(str[0])){
@@ -61,6 +69,8 @@ function unwrap(str){
 	}
 }
 
+
+//building formulars
 function buildform(str){
 	output="";
 	
@@ -73,7 +83,7 @@ function buildform(str){
 	return output;
 }
 
-
+//initializes with starting page or next page (with seedwriting)
 function call(i){
 	if(i==2){
 		writeseed(index);
@@ -85,6 +95,8 @@ function call(i){
 	}
 }
 
+
+//just changes the opacity of the navbar icons and if they do their jobs
 function navopac(){
 	
 	if( index>=max || talevalue==true){
@@ -104,16 +116,19 @@ function navopac(){
 	talevalue=false;
 }
 
+//generating the strings for the last page and injects them
 function seedOut(){
 	
+	//the two if blocks check if it is a valid seed
 	if(seed.charAt(0)<n0.length-1 && seed.charAt(1)<n1[seed.charAt(0)].length-1 && seed.charAt(2)<n2.length-1 && seed.charAt(3)<n3.length-1 && seed.charAt(4)<n4[seed.charAt(3)].length-1 && seed.charAt(5)<n5.length-1 && seed.charAt(6)<n4[seed.charAt(5)].length-1){
 		if(seed.charAt(0)>-1 && seed.charAt(1)>-1 && seed.charAt(2)>-1 && seed.charAt(3)>-1 && seed.charAt(4)>-1 && seed.charAt(5)>-1 && seed.charAt(6)>-1){
-			
+			//just for navbar purposes
 			index=seed.length;
 			
 			outb="Your seed is: <span title='Copy to Clipboard'><button id='copy' class='btn inputs'>"+seed+"</button></span><div id='seedoutput'></div><br><br>These are the mods you can use without any limitations:<br><br>";
 			outb2="<br>These are the mods you can learn from other players:<br><br>"
 			
+			//generating the header text
 			outh="Let me repeat what you just told me, just to be sure I understood all of it.<br>You are a "+ n1[seed.charAt(0)][parseInt(seed.charAt(1))+1][0].toLowerCase()+ " " + n4[seed.charAt(3)][parseInt(seed.charAt(4))+1][0].toLowerCase() + " from "+ n2[parseInt(seed.charAt(2))+1][0].toLowerCase()+ ". You want to know more about what it is like to be";
 			
 			if(seed.charAt(5)==4){
@@ -128,9 +143,9 @@ function seedOut(){
 			know2="";
 			
 			firstelement=0;
-			
+			//executes the convertation of the mixed mod-array into a simple string array
 			for(i=0;i<seed.length;i++){
-				if(i==0){
+				if(i==0||i==2||i==3){
 					
 					temp=outbody[i][seed.charAt(i)].split(";");
 					for(n=0; n< temp.length;n++){
@@ -143,7 +158,7 @@ function seedOut(){
 							}
 						}
 					}
-				}else if(i==1){
+				}else if(i==1||i==4){
 					temp=outbody[i][seed.charAt(i-1)][seed.charAt(i)].split(";");
 					for(n=0; n< temp.length;n++){
 						if(temp[n]!=""){
@@ -155,44 +170,6 @@ function seedOut(){
 							}
 						}
 					}
-				}else if(i==2){
-					temp=outbody[i][seed.charAt(i)].split(";");
-					for(n=0; n< temp.length;n++){
-						if(temp[n]!=""){
-							if(firstelement==0){
-								know+=temp[n];
-								firstelement=1;
-							}else{
-								know+=", "+temp[n];
-							}
-						}
-					}
-				}else if(i==3){
-					temp=outbody[i][seed.charAt(i)].split(";");
-					for(n=0; n< temp.length;n++){
-						if(temp[n]!=""){
-							if(firstelement==0){
-								know+=temp[n];
-								firstelement=1;
-							}else{
-								know+=", "+temp[n];
-							}
-						}
-					}
-				}else if(i==4){
-					temp=outbody[i][seed.charAt(i-1)][seed.charAt(i)].split(";");
-					
-					for(n=0; n< temp.length;n++){
-						if(temp[n]!=""){
-							if(firstelement==0){
-								know+=temp[n];
-								firstelement=1;
-							}else{
-								know+=", "+temp[n];
-							}
-						}
-					}
-					
 				}else if(i==5){
 					firstelement=0;
 					temp=outbody[3][seed.charAt(i)].split(";");
@@ -226,6 +203,7 @@ function seedOut(){
 				}
 			}
 			
+			//had to do this because the player wouldn't be able to learn any adventurer skills
 			if(n5[parseInt(seed.charAt(5))+1][0]=="Adventurer"){
 				temp=outbody[4][seed.charAt(5)][seed.charAt(6)].split(";");
 				know2=temp[0];
@@ -243,10 +221,12 @@ function seedOut(){
 				know2 = know2.split(", ").unique();
 			}
 			
-			
+			//creates sorted arrays
 			know=know.split(", ").unique().sort();
 			know2=know2.sort();
 			
+			
+			//building tables
 			knowout1="<table>";
 			
 			for(i=0;i<know.length;i++){
@@ -297,12 +277,15 @@ function seedOut(){
 		
 		knowout2+="</table>";
 		
+		//combining into one variable
 		outb+=knowout1+"<br><br>";
 		outb+=outb2+knowout2;
 		
+		//injecting
 		document.getElementById('descHead').innerHTML = outh;
 		document.getElementById('embedding').innerHTML = outb;
 		
+		//creating the listener for the copy button
 		document.getElementById('copy').addEventListener("click", function trigger() {
 			copy();
 		});
@@ -310,6 +293,7 @@ function seedOut(){
 	}
 };
 
+//iterates through the radio buttons and writes the value to the string
 function writeseed(pos){
 	a = document.getElementsByName('topic');
 	for(i=0;i<a.length;i++){

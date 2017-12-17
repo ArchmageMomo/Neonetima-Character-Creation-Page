@@ -257,7 +257,7 @@ var outbody=[
 						"Chemistry"
 					],
 					[
-						"Advanced Chimneys;Chisel;SecretRoomsMod;Storage Drawers;BiblioCraft;ArchitectureCraft;FastLadder;Thuts Elevators;Chisel and Bits;Drawers and Bits; Extra Bit Manipulation;Immersive Craft",
+						"Advanced Chimneys;Chisel;SecretRoomsMod;Storage Drawers;BiblioCraft;ArchitectureCraft;FastLadder;Thuts Elevators;Chisel and Bits;Drawers and Bits;Extra Bit Manipulation;Immersive Craft",
 						"Enchanting +;Enchantchanger",
 						"Floricraft;Mystical Agriculture (and MFR Compatibility);Plants;Forestry;Ender Crop;Ashenwheat;Dynamic Trees;Pam's HarvestCraft",
 						"Tinker's Construct;PlusTIC",

@@ -134,7 +134,7 @@ function seedOut(){
 			if(seed.charAt(5)==4){
 				outh+= " an "+ n5[parseInt(seed.charAt(5))+1][0].toLowerCase()+". "
 			}else{
-				outh+= " a "+ n5[parseInt(seed.charAt(5))+1][0].toLowerCase() + " but aren't interested in the work of " + n6[parseInt(seed.charAt(5))][parseInt(seed.charAt(5))+1][0].toLowerCase()+"s. "
+				outh+= " a "+ n5[parseInt(seed.charAt(5))+1][0].toLowerCase() + " but aren't interested in the work of " + n6[parseInt(seed.charAt(5))][parseInt(seed.charAt(5))][0].toLowerCase()+"s. "
 			}
 			
 			outh+="All of this is right? Damn my <span title='Pun completely intended'>memory</span> is good. Oh, there it is! That's the place your adventure will begin! I have to leave now, there are many other people in need of my leadership.<br> Good luck on Neonetima! May light shine in your darkest days!";
@@ -198,8 +198,8 @@ function seedOut(){
 							}
 						}
 					}
-					know2 = know2.split(", ").filter(item => !know.split(", ").includes(item)).filter(item => !outbody[4][seed.charAt(i-1)][seed.charAt(i)].split(";").includes(item)).unique();
 					
+					know2=know2.split(", ").filter(item => !know.split(", ").includes(item)).filter(item => !outbody[4][seed.charAt(i-1)][parseInt(seed.charAt(i))].split(";").includes(item)).unique();
 				}
 			}
 			

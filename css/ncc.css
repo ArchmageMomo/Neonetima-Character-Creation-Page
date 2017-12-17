@@ -128,14 +128,15 @@ a.headerpic:active{
 	transition: all 1s ease-in-out;
 	
 	border: none;
-	background-image: url("../img/portal.jpg");
 	box-shadow: 1px 1px 1px #777;
+	
+	background-image: url("../img/portal.jpg");
+	background-size: 100%;
+	background-size: 100px auto;
 }
 
 .description-box{
-	
 	font-family: 'Indie Flower', cursive;
-	
 }
 
 table{

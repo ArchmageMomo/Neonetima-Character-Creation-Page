@@ -227,69 +227,30 @@ function seedOut(){
 			
 			
 			//building tables
-			knowout1="<table>";
+			knowout1=maketabular(know)
+			knowout2=maketabular(know2)
 			
-			for(i=0;i<know.length;i++){
-				if(i%3==0){
-					knowout1+="<tr><td>"+know[i]+"</td>";
-				}else if(i%3==1){
-					knowout1+="<td>"+know[i]+"</td>";
-				}else{
-					knowout1+="<td>"+know[i]+"</td></tr>";
-				}
-			}
+			// building table of free to use mods
+			know=standard.split(";").sort().unique();
+			knowout2+="<br><br><br>All characters can use:<br><br><table>"+maketabular(know);
 			
-			knowout1+="</table>"
-			knowout2="<table>";
+			//combining into one variable
+			outb+=knowout1+"<br><br>";
+			outb+=outb2+knowout2;
 			
-			for(i=0;i<know2.length;i++){
-				if(i%3==0){
-					if(know2[i]!=="undefined"&&typeof know2[i]!=="undefined"){
-						knowout2+="<tr><td>"+know2[i]+"</td>";
-					}
-				}else if(i%3==1){
-					if(know2[i]!=="undefined"&&typeof know2[i]!=="undefined"){
-						knowout2+="<td>"+know2[i]+"</td>";
-					}
-				}else{
-					if(know2[i]!=="undefined"&&typeof know2[i]!=="undefined"){
-						knowout2+="<td>"+know2[i]+"</td></tr>";
-					}
-				}
-			}
-			knowout2+="</table>"
+			//injecting
+			document.getElementById('descHead').innerHTML = outh;
+			document.getElementById('embedding').innerHTML = outb;
+			
+			//creating the listener for the copy button
+			document.getElementById('copy').addEventListener("click", function trigger() {
+				copy();
+			});
 		}else{
-			knowout2="";
+			criticalerror();
 		}
-		
-		knowout2+="<br><br><br>All characters can use:<br><br><table>";
-		know=standard.split(";").sort().unique();
-		
-		for(i=0;i<know.length;i++){
-			if(i%3==0){
-				knowout2+="<tr><td>"+know[i]+"</td>";
-			}else if(i%3==1){
-				knowout2+="<td>"+know[i]+"</td>";
-			}else{
-				knowout2+="<td>"+know[i]+"</td></tr>";
-			}
-		}
-		
-		knowout2+="</table>";
-		
-		//combining into one variable
-		outb+=knowout1+"<br><br>";
-		outb+=outb2+knowout2;
-		
-		//injecting
-		document.getElementById('descHead').innerHTML = outh;
-		document.getElementById('embedding').innerHTML = outb;
-		
-		//creating the listener for the copy button
-		document.getElementById('copy').addEventListener("click", function trigger() {
-			copy();
-		});
-		
+	}else{
+		criticalerror();
 	}
 };
 
@@ -302,4 +263,33 @@ function writeseed(pos){
 		}
 	}
 
+}
+
+//shared code between all table building stuff
+function maketabular(put){
+	ret="<table>";
+	
+	for(i=0;i<put.length;i++){
+		if(i%3==0){
+			if(put[i]!=="undefined"&&typeof put[i]!=="undefined"){
+				ret+="<tr><td>"+put[i]+"</td>";
+			}
+		}else if(i%3==1){
+			if(put[i]!=="undefined"&&typeof put[i]!=="undefined"){
+				ret+="<td>"+put[i]+"</td>";
+			}
+		}else{
+			if(put[i]!=="undefined"&&typeof put[i]!=="undefined"){
+				ret+="<td>"+put[i]+"</td></tr>";
+			}
+		}
+	}
+	ret+="</table>"
+	
+	return ret
+}
+
+function criticalerror(){
+	document.getElementById('descHead').innerHTML = "I'm sorry, something went terribly wrong.";
+	document.getElementById('embedding').innerHTML = "Try reloading the page and try again. If the error reoccures, report the bug with a step by step guide of what you just did.<br><br> If you just injected some code, get lost.<br><img href=''>";
 }

@@ -249,7 +249,7 @@ var outbody=[
 					[
 						"Advanced Rocketry",
 						"Crossroads MC;Psi;Particle Man",
-						"Immersive Engineering;Thermal Expansions;Thermal Foundation;Simply Jetpacks;Redstone Arsenal",
+						"Immersive Engineering;Thermal Expansions;Thermal Dynamics;Thermal Foundation;Simply Jetpacks;Redstone Arsenal",
 						"Industrial Craft;Minefactory Reloaded;Applied Energistics 2;AE2 Stuff;Extreme Reactors",
 						"Cyberware;Modular Powersuit",
 						"Genetics Reborn;Forestry",

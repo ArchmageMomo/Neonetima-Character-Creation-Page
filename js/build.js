@@ -212,7 +212,28 @@ function aTale(){
 	document.getElementById('embedding').innerHTML = "";
 	document.getElementById('commitbar').innerHTML="";
 	document.getElementById('commitbar').setAttribute('class','commitbar-pos')
-	index+=1;
+	index++;
+	talevalue=true;
+	navopac();
+}
+
+//Don't mind this
+function anotherchristmastree(){
+	document.getElementById('descHead').innerHTML = "Affection is naturally addictive, and toxic.";
+	document.getElementById('embedding').innerHTML = "<span style='font-size:60px'>Who has immunity to your venom?</span>";
+	document.getElementById('commitbar').innerHTML="";
+	document.getElementById('commitbar').setAttribute('class','commitbar-pos')
+	index++;
+	talevalue=true;
+	navopac();
+}
+
+function secret(){
+	document.getElementById('descHead').innerHTML = "You found a secret!<br>Here's a hint as reward:";
+	document.getElementById('embedding').innerHTML = "<span title='And probably a lot of hover text'>There are two other secrets to be found on this page.</span>";
+	document.getElementById('commitbar').innerHTML="";
+	document.getElementById('commitbar').setAttribute('class','commitbar-pos')
+	index++;
 	talevalue=true;
 	navopac();
 }

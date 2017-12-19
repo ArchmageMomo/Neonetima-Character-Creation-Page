@@ -3,6 +3,8 @@
 
 body {
     background-color: lightblue;
+	width: 100%;
+	height: 100%;	
 }
 
 .blocks{
@@ -38,7 +40,6 @@ body {
 
 }
 
-
 .inputs{
 	font-size: 25px;
 	font-family: 'Acme', sans-serif;
@@ -56,18 +57,18 @@ body {
 }
 
 .headerpic{
-	height: 2%;
+	height: 100%;
 	width: auto;
 }
 
 .headerpic:hover{
-	transform: scale(1.3);
+	transform: scale(1.35);
 	
 	transition: all .25s ease-in-out;
 }
 
 a.headerpic:active{
-	transform: scale(0.8);
+	transform: scale(0.75);
 	
 	transition: all .25s ease-in-out;
 }
@@ -82,7 +83,7 @@ a.headerpic:active{
 
 .commitbar-pos{
 	position: fixed;
-	left: 86%;
+	left: 87%;
 	top: 33%;
 	
 	padding: 1%;
@@ -145,4 +146,9 @@ table{
 }
 td{
 	width:35%;
+}
+
+#e{
+	background-image: url("../img/unnamed.png");
+	color: rgba(0,0,0,0);
 }

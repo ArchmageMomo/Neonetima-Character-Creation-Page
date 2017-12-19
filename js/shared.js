@@ -17,6 +17,7 @@ function seedlength(){
 			break;
 		}
 	}
+	randinit()
 }
 
 //copied from the web, checks if an object is a string and returnes boolean
@@ -57,4 +58,12 @@ function criticalerror(){
 	index=-1;
 	max=-1;
 	navopac();
+}
+
+//placement of something i forgot
+function randinit(){
+	document.getElementById("issiutng").style.top=getRandomInt(80,100)+'%';
+	document.getElementById("issiutng").style.left=getRandomInt(0,10)+'%';
+	document.getElementById("issiutng").style.height='5%';
+	document.getElementById("issiutng").style.width='5%';
 }

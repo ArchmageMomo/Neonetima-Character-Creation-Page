@@ -15,12 +15,14 @@ function initialize(pos){
 		
 		document.getElementById('commitbar').innerHTML="";
 		document.getElementById('commitbar').setAttribute('class','commitbar-pos')
+		document.getElementById("issiutng").innerHTML="<span onclick='secret()' id='e'>SECRET</span>";
 		
 	}else if(pos>=0 && pos != seed.length){
 		//the form pages
 		
 		document.getElementById('commitbar').innerHTML=commitbtn;
 		document.getElementById('commitbar').setAttribute('class','commitbar-pos commitbar-active')
+		document.getElementById("issiutng").innerHTML="";
 		
 		document.getElementById('commit').addEventListener("click", function trigger() {
 			call(2);
@@ -44,6 +46,7 @@ function initialize(pos){
 		
 	}else if(pos==seed.length){
 		//output page
+		document.getElementById("issiutng").innerHTML="";
 		document.getElementById('commitbar').innerHTML="";
 		document.getElementById('commitbar').setAttribute('class','commitbar-pos')
 		

@@ -65,7 +65,7 @@ var n1 = [
 			["Nephilim","As they are children between angels and demons, nobody likes them. Some say they are more human than humans.",3]],
 		["Have you ever seen something other than the heavens?",
 			["Seraphim","You aren't born, you are created. Do you know your purpose?",0],
-			["Arisen","Some demons don't like hellfire. Heaven is much more comfortable",1],
+			["<span onclick='anotherchristmastree()'>Arisen</span>","Some demons don't like hellfire. Heaven is much more comfortable",1],
 			["Half-Angel","Isn't it strange that there are angels who have kids with humans? They are worse than pigs, so to say. And their stupid questions! \"Did it hurt when you fell from heaven?\" It did. Thanks for asking.",2],
 			["Nephilim","As they are children between angels and demons, nobody likes them. Some say they are more human than humans.",3]]
 		];

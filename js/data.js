@@ -156,12 +156,12 @@ var n6 = [
 			["Adventurer","",0]]
 		];
 
-var standard="The Betweenlands;Advanced Inventory;Akashic Tome;Animania;Battle Towers;Infernal Mobs;Auto Sapling;Back Tools;Baubles;Better Storage;Better with Mods;Better FPS;Biomes O' Plenty;Bloodmoon;AppleCore;AppleSkin;AutoRegLib;BdLib;Bookshelf;Brandon's Core;Cannibalism;Chameleon;Chicken Chunks;CodeChicken Core;CodeChicken Lib;Coffee Spawner;CoFH Core;Compat Layer;ConnectedTexturesMod;Corail Tombstone;CoralReef;CoroUtil;Cosmetic Armor;CraftStudio API;Creeper Nuggets;CustomMobSpawner;CXLibrary;Cyclic;Cyclops Core;D3Core;Deadly Monsters;Enchantment Descriptions;EnderCore;Enhanced Visuals;Eternal Winter;Extra Utils;Fanny Pack;Fast Leaf Decay;ForgeEndertech;Guide-API;Hardcore Darkness;Hardcore Wither;iChunUtil;Interaction Wheel;Inventory Tweaks;Iron Apples;IvToolkit;JourneyMap;JEI (And all dependet mods);Kore Sample L;Level Up!;LibVulpes;LLibrary;Lumberjack;Mantle;MCMultiPart;Minecraft Comes Alive;Mo' Creatures;ModUtilsLib;Morpheus;MusicCraft;NotEnoughIDs;OMLib;OpenModularPassiveDefense;Natura;Quark;RadixCore;ReAuth;Recurrent Complex;Rockhounding Mod: Core;Rockhounding Mod: Surface;Roguelike Dungeons;ShadowMC;Grimoire of Gaia;Backpacks;Silent Lib;NoMoreRecipeConflict;TamModized;The Spice of Life;ThutCore;UniDict;ValkyrieLib;WAILA (And all dependent mods);WanionLib;ZeroCore;Zombie Awareness;Ancient Trees L";
+var standard="Doomlike Dungeons;Natural Nether Portals;Advanced Inventory;Akashic Tome;Animania;Battle Towers;Infernal Mobs;Auto Sapling;Back Tools;Baubles;Better Storage;Better with Mods;Better FPS;Biomes O' Plenty;Bloodmoon;AppleCore;AppleSkin;AutoRegLib;BdLib;Bookshelf;Brandon's Core;Cannibalism;Chameleon;Chicken Chunks;CodeChicken Core;CodeChicken Lib;Coffee Spawner;CoFH Core;Compat Layer;ConnectedTexturesMod;Corail Tombstone;CoralReef;CoroUtil;Cosmetic Armor;CraftStudio API;Creeper Nuggets;CustomMobSpawner;CXLibrary;Cyclic;Cyclops Core;D3Core;Deadly Monsters;Enchantment Descriptions;EnderCore;Enhanced Visuals;Eternal Winter;Extra Utils;Fanny Pack;Fast Leaf Decay;ForgeEndertech;Guide-API;Hardcore Darkness;Hardcore Wither;iChunUtil;Interaction Wheel;Inventory Tweaks;Iron Apples;IvToolkit;JourneyMap;JEI (And all dependet mods);Kore Sample L;Level Up!;LibVulpes;LLibrary;Lumberjack;Mantle;MCMultiPart;Minecraft Comes Alive;Mo' Creatures;ModUtilsLib;Morpheus;MusicCraft;NotEnoughIDs;OMLib;OpenModularPassiveDefense;Natura;Quark;RadixCore;ReAuth;Recurrent Complex;Rockhounding Mod: Core;Rockhounding Mod: Surface;Roguelike Dungeons;ShadowMC;Grimoire of Gaia;Backpacks;Silent Lib;NoMoreRecipeConflict;TamModized;The Spice of Life;ThutCore;UniDict;ValkyrieLib;WAILA (And all dependent mods);WanionLib;ZeroCore;Zombie Awareness;Ancient Trees L";
 		
 var outbody=[
 				[
 					"Signposts",
-					"Signposts",
+					"",
 					"",
 					"Signposts",
 					"Bonfires",
@@ -173,12 +173,12 @@ var outbody=[
 						"",
 					],
 					[
-						"",
+						"Floocraft",
 						"Astral Sorcery",
-						"",
+						"Floocraft",
 						"Druidry",
 						"Tinker's Construct",
-						"ProjectE",
+						"ProjectE;Yoyos",
 						"God-Weapons",
 					],
 					[
@@ -248,7 +248,7 @@ var outbody=[
 					],
 					[
 						"Advanced Rocketry",
-						"Crossroads MC;Psi;Particle Man",
+						"Crossroads MC;Psi;PSIonic Upgrades;Particle Man",
 						"Immersive Engineering;Thermal Expansions;Thermal Dynamics;Thermal Foundation;Simply Jetpacks;Redstone Arsenal",
 						"Industrial Craft;Minefactory Reloaded;Applied Energistics 2;AE2 Stuff;Extreme Reactors",
 						"Cyberware;Modular Powersuit",

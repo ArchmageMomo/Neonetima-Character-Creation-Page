@@ -52,6 +52,7 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+//printing error message
 function criticalerror(){
 	document.getElementById('descHead').innerHTML = "I'm sorry, something went terribly wrong.";
 	document.getElementById('embedding').innerHTML = "Try reloading the page and try again. If the error reoccures, report the bug with a step by step guide of what you just did.<br><br> If you just injected some code, get lost.<br>";

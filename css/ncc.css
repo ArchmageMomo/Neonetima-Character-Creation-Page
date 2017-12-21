@@ -149,6 +149,8 @@ td{
 }
 
 #e{
-	background-image: url("../img/unnamed.png");
 	color: rgba(0,0,0,0);
+	position: relative;
+	width:100%;
+	height:auot;
 }

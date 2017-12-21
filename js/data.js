@@ -9,7 +9,7 @@ var commitbtn= "<button id='commit' class='btn inputs'>Next</button>"
 var talevalue=false;
 
 var ni = [
-			"This page was created in order to help you creating your character and defining which of the mods in the modpack your character is allowed to use.<br>For further information consult our page on <a href=''>Curseforge</a>.",
+			"This page was created in order to help you creating your character and defining which of the mods in the modpack your character is allowed to use.<br>For further information consult our page on <a href='https://minecraft.curseforge.com/projects/neonetima'>Curseforge</a>.",
 			"<button class='btn inputs' onclick=\"initialize(0)\">Start the character creation</button>\
 			<br><br>\
 			<span title='This may or may not create a valid character. You are warned!'><button class='btn inputs' onclick='randomize()'>Get a random character</button></span>\
